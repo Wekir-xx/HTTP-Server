@@ -8,7 +8,8 @@ CONFIG += c++17 cmdline
 
 SOURCES += \
         main.cpp \
-        qsimpleserver.cpp
+        qsimpleserver.cpp \
+        qsocketthread.cpp
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
@@ -16,4 +17,5 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 HEADERS += \
-    qsimpleserver.h
+    qsimpleserver.h \
+    qsocketthread.h

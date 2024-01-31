@@ -5,6 +5,7 @@
 #include <QTcpSocket>
 #include <QDebug>
 #include <QDateTime>
+#include "qsocketthread.h"
 
 class QSimpleServer : public QTcpServer
 {
@@ -16,8 +17,6 @@ signals:
 
 public slots:
     void incomingConnection (qintptr handle);
-    void onReadyRead();
-    void onDisconnected();
 };
 
 #endif // QSIMPLESERVER_H
